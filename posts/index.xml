@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>test - Tag - Botter</title>
-        <link>http://example.org/tags/test/</link>
-        <description>test - Tag - Botter</description>
+        <title>All Posts - Botter</title>
+        <link>http://example.org/posts/</link>
+        <description>All Posts | Botter</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hi@zhangqibot.com (Botter)</managingEditor>
-            <webMaster>hi@zhangqibot.com (Botter)</webMaster><lastBuildDate>Tue, 09 May 2023 01:04:54 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/test/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hi@zhangqibot.com (Botter)</webMaster><lastBuildDate>Tue, 09 May 2023 01:04:54 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Hello World</title>
     <link>http://example.org/hello-world/</link>
     <pubDate>Tue, 09 May 2023 01:04:54 &#43;0800</pubDate><author>
