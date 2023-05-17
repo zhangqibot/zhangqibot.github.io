@@ -155,27 +155,39 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#prompting-principle-1-write-clear-and-specific-instructions">Prompting Principle <strong>1: Write clear and specific instructions</strong></a>
+    <li><a href="#guidelines-for-prompting"><strong><strong>Guidelines for Prompting</strong></strong></a>
       <ul>
-        <li><a href="#tactic-1-use-delimiters-to-clearly-indicate-distinct-parts-of-the-input">Tactic 1: Use delimiters to clearly indicate distinct parts of the input</a></li>
-        <li><a href="#tactic-2-ask-for-a-structured-output">Tactic 2: Ask for a structured output</a></li>
-        <li><a href="#tactic-3-ask-the-model-to-check-whether-conditions-are-satisfied">Tactic 3: Ask the model to check whether conditions are satisfied</a></li>
-        <li><a href="#tactic-4-few-shot-prompting"><strong><strong>Tactic 4: &ldquo;Few-shot&rdquo; prompting</strong></strong></a></li>
+        <li><a href="#prompting-principle-1-write-clear-and-specific-instructions">Prompting Principle <strong>1: Write clear and specific instructions</strong></a>
+          <ul>
+            <li><a href="#tactic-1-use-delimiters-to-clearly-indicate-distinct-parts-of-the-input">Tactic 1: Use delimiters to clearly indicate distinct parts of the input</a></li>
+            <li><a href="#tactic-2-ask-for-a-structured-output">Tactic 2: Ask for a structured output</a></li>
+            <li><a href="#tactic-3-ask-the-model-to-check-whether-conditions-are-satisfied">Tactic 3: Ask the model to check whether conditions are satisfied</a></li>
+            <li><a href="#tactic-4-few-shot-prompting"><strong><strong>Tactic 4: &ldquo;Few-shot&rdquo; prompting</strong></strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#prompting-principle-2-give-the-model-time-to-think">Prompting Principle <strong>2: Give the model time to “think”</strong></a>
+          <ul>
+            <li><a href="#tactic-1-specify-the-steps-required-to-complete-a-task">Tactic 1: Specify the steps required to complete a task</a></li>
+            <li><a href="#tactic-2-instruct-the-model-to-work-out-its-own-solution-before-rushing-to-a-conclusion"><strong><strong>Tactic 2: Instruct the model to work out its own solution before rushing to a conclusion</strong></strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#model-limitations-hallucinations"><strong>Model Limitations: Hallucinations</strong></a></li>
       </ul>
     </li>
-    <li><a href="#prompting-principle-2-give-the-model-time-to-think">Prompting Principle <strong>2: Give the model time to “think”</strong></a>
+    <li><a href="#iterative-prompt-development"><strong><strong>Iterative Prompt Development</strong></strong></a>
       <ul>
-        <li><a href="#tactic-1-specify-the-steps-required-to-complete-a-task">Tactic 1: Specify the steps required to complete a task</a></li>
-        <li><a href="#tactic-2-instruct-the-model-to-work-out-its-own-solution-before-rushing-to-a-conclusion"><strong><strong>Tactic 2: Instruct the model to work out its own solution before rushing to a conclusion</strong></strong></a></li>
+        <li><a href="#issue-1-the-text-is-too-long">Issue 1: The text is too long</a></li>
+        <li><a href="#issue-2-text-focuses-on-the-wrong-details"><strong>Issue 2. Text focuses on the wrong details</strong></a></li>
+        <li><a href="#issue-3-description-needs-a-table-of-dimensions"><strong>Issue 3. Description needs a table of dimensions</strong></a></li>
       </ul>
     </li>
-    <li><a href="#model-limitations-hallucinations"><strong>Model Limitations: Hallucinations</strong></a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#issue-1-the-text-is-too-long">Issue 1: The text is too long</a></li>
-    <li><a href="#issue-2-text-focuses-on-the-wrong-details"><strong>Issue 2. Text focuses on the wrong details</strong></a></li>
-    <li><a href="#issue-3-description-needs-a-table-of-dimensions"><strong>Issue 3. Description needs a table of dimensions</strong></a></li>
+    <li><a href="#summarizing"><strong>Summarizing</strong></a></li>
+    <li><a href="#inferring"><strong>Inferring</strong></a></li>
+    <li><a href="#transforming"><strong>Transforming</strong></a></li>
+    <li><a href="#expanding"><strong>Expanding</strong></a></li>
+    <li><a href="#chatbot"><strong>Chatbot</strong></a></li>
+    <li><a href="#conclusion"><strong>Conclusion</strong></a></li>
+    <li><a href="#reference">Reference</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p>Course Notes of ChatGPT Prompt Engineering for Developers.</p>
@@ -265,10 +277,10 @@
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="guidelines-for-prompting" class="headerLink">
-    <a href="#guidelines-for-prompting" class="header-mark"></a><strong><strong>Guidelines for Prompting</strong></strong></h1><h2 id="prompting-principle-1-write-clear-and-specific-instructions" class="headerLink">
-    <a href="#prompting-principle-1-write-clear-and-specific-instructions" class="header-mark"></a>Prompting Principle <strong>1: Write clear and specific instructions</strong></h2><h3 id="tactic-1-use-delimiters-to-clearly-indicate-distinct-parts-of-the-input" class="headerLink">
-    <a href="#tactic-1-use-delimiters-to-clearly-indicate-distinct-parts-of-the-input" class="header-mark"></a>Tactic 1: Use delimiters to clearly indicate distinct parts of the input</h3><ul>
+</div><h2 id="guidelines-for-prompting" class="headerLink">
+    <a href="#guidelines-for-prompting" class="header-mark"></a><strong><strong>Guidelines for Prompting</strong></strong></h2><h3 id="prompting-principle-1-write-clear-and-specific-instructions" class="headerLink">
+    <a href="#prompting-principle-1-write-clear-and-specific-instructions" class="header-mark"></a>Prompting Principle <strong>1: Write clear and specific instructions</strong></h3><h4 id="tactic-1-use-delimiters-to-clearly-indicate-distinct-parts-of-the-input" class="headerLink">
+    <a href="#tactic-1-use-delimiters-to-clearly-indicate-distinct-parts-of-the-input" class="header-mark"></a>Tactic 1: Use delimiters to clearly indicate distinct parts of the input</h4><ul>
 <li>Delimiters can be anything like: `````, <code>&quot;&quot;&quot;</code>, <code>&lt; &gt;</code>, <code>&lt;tag&gt; &lt;/tag&gt;</code>, <code>:</code></li>
 </ul>
 <div class="highlight"><div class="chroma">
@@ -289,8 +301,8 @@
 </span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="tactic-2-ask-for-a-structured-output" class="headerLink">
-    <a href="#tactic-2-ask-for-a-structured-output" class="header-mark"></a>Tactic 2: Ask for a structured output</h3><ul>
+</div><h4 id="tactic-2-ask-for-a-structured-output" class="headerLink">
+    <a href="#tactic-2-ask-for-a-structured-output" class="header-mark"></a>Tactic 2: Ask for a structured output</h4><ul>
 <li>JSON, HTML</li>
 </ul>
 <div class="highlight"><div class="chroma">
@@ -311,8 +323,8 @@
 </span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="tactic-3-ask-the-model-to-check-whether-conditions-are-satisfied" class="headerLink">
-    <a href="#tactic-3-ask-the-model-to-check-whether-conditions-are-satisfied" class="header-mark"></a>Tactic 3: Ask the model to check whether conditions are satisfied</h3><div class="highlight"><div class="chroma">
+</div><h4 id="tactic-3-ask-the-model-to-check-whether-conditions-are-satisfied" class="headerLink">
+    <a href="#tactic-3-ask-the-model-to-check-whether-conditions-are-satisfied" class="header-mark"></a>Tactic 3: Ask the model to check whether conditions are satisfied</h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -348,8 +360,8 @@
 </span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="tactic-4-few-shot-prompting" class="headerLink">
-    <a href="#tactic-4-few-shot-prompting" class="header-mark"></a><strong><strong>Tactic 4: &ldquo;Few-shot&rdquo; prompting</strong></strong></h3><div class="highlight"><div class="chroma">
+</div><h4 id="tactic-4-few-shot-prompting" class="headerLink">
+    <a href="#tactic-4-few-shot-prompting" class="header-mark"></a><strong><strong>Tactic 4: &ldquo;Few-shot&rdquo; prompting</strong></strong></h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -379,9 +391,9 @@
 </span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="prompting-principle-2-give-the-model-time-to-think" class="headerLink">
-    <a href="#prompting-principle-2-give-the-model-time-to-think" class="header-mark"></a>Prompting Principle <strong>2: Give the model time to “think”</strong></h2><h3 id="tactic-1-specify-the-steps-required-to-complete-a-task" class="headerLink">
-    <a href="#tactic-1-specify-the-steps-required-to-complete-a-task" class="header-mark"></a>Tactic 1: Specify the steps required to complete a task</h3><div class="highlight"><div class="chroma">
+</div><h3 id="prompting-principle-2-give-the-model-time-to-think" class="headerLink">
+    <a href="#prompting-principle-2-give-the-model-time-to-think" class="header-mark"></a>Prompting Principle <strong>2: Give the model time to “think”</strong></h3><h4 id="tactic-1-specify-the-steps-required-to-complete-a-task" class="headerLink">
+    <a href="#tactic-1-specify-the-steps-required-to-complete-a-task" class="header-mark"></a>Tactic 1: Specify the steps required to complete a task</h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -458,8 +470,8 @@
 </span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="tactic-2-instruct-the-model-to-work-out-its-own-solution-before-rushing-to-a-conclusion" class="headerLink">
-    <a href="#tactic-2-instruct-the-model-to-work-out-its-own-solution-before-rushing-to-a-conclusion" class="header-mark"></a><strong><strong>Tactic 2: Instruct the model to work out its own solution before rushing to a conclusion</strong></strong></h3><div class="highlight"><div class="chroma">
+</div><h4 id="tactic-2-instruct-the-model-to-work-out-its-own-solution-before-rushing-to-a-conclusion" class="headerLink">
+    <a href="#tactic-2-instruct-the-model-to-work-out-its-own-solution-before-rushing-to-a-conclusion" class="header-mark"></a><strong><strong>Tactic 2: Instruct the model to work out its own solution before rushing to a conclusion</strong></strong></h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -564,8 +576,8 @@
 </span></span><span class="line"><span class="cl">&#34;&#34;&#34;
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="model-limitations-hallucinations" class="headerLink">
-    <a href="#model-limitations-hallucinations" class="header-mark"></a><strong>Model Limitations: Hallucinations</strong></h2><p>Hallucination makes statements that sound plausible but are not true</p>
+</div><h3 id="model-limitations-hallucinations" class="headerLink">
+    <a href="#model-limitations-hallucinations" class="header-mark"></a><strong>Model Limitations: Hallucinations</strong></h3><p>Hallucination makes statements that sound plausible but are not true</p>
 <p><strong>Reducing hallucinations:</strong> First find relevant information, then answer the question based on the relevant information.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -583,8 +595,8 @@
 </span></span><span class="line"><span class="cl"><span class="c1"># Boie is a real company, the product name is not real.</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="iterative-prompt-development" class="headerLink">
-    <a href="#iterative-prompt-development" class="header-mark"></a><strong><strong>Iterative Prompt Development</strong></strong></h1><p><figure><a class="lightgallery" href="/chatgpt-prompt-engineering-for-developers/Untitled%201.png" title="Untitled" data-thumbnail="/chatgpt-prompt-engineering-for-developers/Untitled%201.png">
+</div><h2 id="iterative-prompt-development" class="headerLink">
+    <a href="#iterative-prompt-development" class="header-mark"></a><strong><strong>Iterative Prompt Development</strong></strong></h2><p><figure><a class="lightgallery" href="/chatgpt-prompt-engineering-for-developers/Untitled%201.png" title="Untitled" data-thumbnail="/chatgpt-prompt-engineering-for-developers/Untitled%201.png">
         <img
             
             loading="lazy"
@@ -603,18 +615,18 @@
             alt="/chatgpt-prompt-engineering-for-developers/Untitled%202.png">
     </a></figure></p>
 <p>The Prompt workflow involves step-by-step development, similar to model training and tuning. However, success in writing prompts usually requires multiple iterations, as depicted in the figure above. It&rsquo;s important to note that there is no one-size-fits-all perfect prompt. The key to becoming a skilled prompt engineer is having a good development and iterative process for creating prompts.</p>
-<h2 id="issue-1-the-text-is-too-long" class="headerLink">
-    <a href="#issue-1-the-text-is-too-long" class="header-mark"></a>Issue 1: The text is too long</h2><p>Limit the number of words/sentences/characters.</p>
+<h3 id="issue-1-the-text-is-too-long" class="headerLink">
+    <a href="#issue-1-the-text-is-too-long" class="header-mark"></a>Issue 1: The text is too long</h3><p>Limit the number of words/sentences/characters.</p>
 <ul>
 <li><code>Use at most 50 words.</code></li>
 <li><code>Use at most 3 sentences.</code></li>
 <li><code>Use at most 280 characters.</code> (This could be more precise because of the tokenization.)</li>
 </ul>
-<h2 id="issue-2-text-focuses-on-the-wrong-details" class="headerLink">
-    <a href="#issue-2-text-focuses-on-the-wrong-details" class="header-mark"></a><strong>Issue 2. Text focuses on the wrong details</strong></h2><p>Ask it to focus on the aspects that are relevant to the intended audience. For example,</p>
+<h3 id="issue-2-text-focuses-on-the-wrong-details" class="headerLink">
+    <a href="#issue-2-text-focuses-on-the-wrong-details" class="header-mark"></a><strong>Issue 2. Text focuses on the wrong details</strong></h3><p>Ask it to focus on the aspects that are relevant to the intended audience. For example,</p>
 <p><code>The description is intended for furnit, so should be technical in nature and focus on the materials the product is constructed from.</code></p>
-<h2 id="issue-3-description-needs-a-table-of-dimensions" class="headerLink">
-    <a href="#issue-3-description-needs-a-table-of-dimensions" class="header-mark"></a><strong>Issue 3. Description needs a table of dimensions</strong></h2><p>Ask it to extract information and organize it in a table. For example,</p>
+<h3 id="issue-3-description-needs-a-table-of-dimensions" class="headerLink">
+    <a href="#issue-3-description-needs-a-table-of-dimensions" class="header-mark"></a><strong>Issue 3. Description needs a table of dimensions</strong></h3><p>Ask it to extract information and organize it in a table. For example,</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -631,8 +643,8 @@
 </span></span><span class="line"><span class="cl">Format everything as HTML that can be used in a website. Place the description in a &lt;div&gt; element.
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="summarizing" class="headerLink">
-    <a href="#summarizing" class="header-mark"></a><strong>Summarizing</strong></h1><div class="highlight"><div class="chroma">
+</div><h2 id="summarizing" class="headerLink">
+    <a href="#summarizing" class="header-mark"></a><strong>Summarizing</strong></h2><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -670,8 +682,8 @@
 </div>
 </div><p>And try &ldquo;extract&rdquo; instead of &ldquo;summarize”:</p>
 <p>If we only want to extract information from a specific aspect, we can request the model to perform &ldquo;text extraction&rdquo; instead of &ldquo;text summarization&rdquo;.</p>
-<h1 id="inferring" class="headerLink">
-    <a href="#inferring" class="header-mark"></a><strong>Inferring</strong></h1><p>Identify types of emotions, Extract useful information, Inferring topics, etc.</p>
+<h2 id="inferring" class="headerLink">
+    <a href="#inferring" class="header-mark"></a><strong>Inferring</strong></h2><p>Identify types of emotions, Extract useful information, Inferring topics, etc.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -743,8 +755,8 @@
 </span></span><span class="line"><span class="cl"><span class="n">response</span> <span class="o">=</span> <span class="n">get_completion</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="transforming" class="headerLink">
-    <a href="#transforming" class="header-mark"></a><strong>Transforming</strong></h1><p>Universal Translator, Tone Transformation, Format Conversion, Spellcheck/Grammar check, etc.</p>
+</div><h2 id="transforming" class="headerLink">
+    <a href="#transforming" class="header-mark"></a><strong>Transforming</strong></h2><p>Universal Translator, Tone Transformation, Format Conversion, Spellcheck/Grammar check, etc.</p>
 <p>Tone Transformation:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -789,8 +801,8 @@
 </span></span><span class="line"><span class="cl"><span class="n">response</span> <span class="o">=</span> <span class="n">get_completion</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="expanding" class="headerLink">
-    <a href="#expanding" class="header-mark"></a><strong>Expanding</strong></h1><p>Customize the automated reply to a customer email</p>
+</div><h2 id="expanding" class="headerLink">
+    <a href="#expanding" class="header-mark"></a><strong>Expanding</strong></h2><p>Customize the automated reply to a customer email</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -889,8 +901,8 @@
             sizes="auto"
             alt="/chatgpt-prompt-engineering-for-developers/Untitled%203.png">
     </a></figure></p>
-<h1 id="chatbot" class="headerLink">
-    <a href="#chatbot" class="header-mark"></a><strong>Chatbot</strong></h1><ul>
+<h2 id="chatbot" class="headerLink">
+    <a href="#chatbot" class="header-mark"></a><strong>Chatbot</strong></h2><ul>
 <li>Dialogues with users (single or multi-character).</li>
 <li>System messages: set the assistant&rsquo;s character and behavior, serve as higher-level commands, and are not perceived by the user.</li>
 <li>Remembering previous conversations: Developers must provide all relevant information for the current conversation. If the model is expected to remember information from previous conversations, the previous dialogue must be input into the model&rsquo;s context.</li>
@@ -904,8 +916,8 @@
             sizes="auto"
             alt="/chatgpt-prompt-engineering-for-developers/Untitled%204.png">
     </a></figure></p>
-<h1 id="conclusion" class="headerLink">
-    <a href="#conclusion" class="header-mark"></a><strong>Conclusion</strong></h1><ul>
+<h2 id="conclusion" class="headerLink">
+    <a href="#conclusion" class="header-mark"></a><strong>Conclusion</strong></h2><ul>
 <li>Two principles:
 <ul>
 <li>Write clear and specific instructions</li>
@@ -916,8 +928,8 @@
 <li>The capabilities: Summarizing, Inferring, Transforming, Expanding</li>
 <li>Building a chatbot</li>
 </ul>
-<h1 id="reference" class="headerLink">
-    <a href="#reference" class="header-mark"></a>Reference</h1><p><a href="https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/" target="_blank" rel="noopener noreferrer">ChatGPT Prompt Engineering for Developers</a></p></div>
+<h2 id="reference" class="headerLink">
+    <a href="#reference" class="header-mark"></a>Reference</h2><p><a href="https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/" target="_blank" rel="noopener noreferrer">ChatGPT Prompt Engineering for Developers</a></p></div>
 
         
 

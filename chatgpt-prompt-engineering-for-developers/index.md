@@ -57,11 +57,11 @@ response = get_completion(prompt)
 print(response)
 ```
 
-# ****Guidelines for Prompting****
+## ****Guidelines for Prompting****
 
-## Prompting Principle **1: Write clear and specific instructions**
+### Prompting Principle **1: Write clear and specific instructions**
 
-### Tactic 1: Use delimiters to clearly indicate distinct parts of the input
+#### Tactic 1: Use delimiters to clearly indicate distinct parts of the input
 
 - Delimiters can be anything like: `````, `"""`, `< >`, `<tag> </tag>`, `:`
 
@@ -74,7 +74,7 @@ into a single sentence.
 """
 ```
 
-### Tactic 2: Ask for a structured output
+#### Tactic 2: Ask for a structured output
 
 - JSON, HTML
 
@@ -87,7 +87,7 @@ book_id, title, author, genre.
 """
 ```
 
-### Tactic 3: Ask the model to check whether conditions are satisfied
+#### Tactic 3: Ask the model to check whether conditions are satisfied
 
 ```python
 prompt = f"""
@@ -107,7 +107,7 @@ then simply write \"No steps provided.\"
 """
 ```
 
-### ****Tactic 4: "Few-shot" prompting****
+#### ****Tactic 4: "Few-shot" prompting****
 
 ```python
 prompt = f"""
@@ -124,9 +124,9 @@ the most intricate tapestry begins with a solitary thread.
 """
 ```
 
-## Prompting Principle **2: Give the model time to “think”**
+### Prompting Principle **2: Give the model time to “think”**
 
-### Tactic 1: Specify the steps required to complete a task
+#### Tactic 1: Specify the steps required to complete a task
 
 ```python
 prompt_1 = f"""
@@ -168,7 +168,7 @@ Text: <{text}>
 """
 ```
 
-### ****Tactic 2: Instruct the model to work out its own solution before rushing to a conclusion****
+#### ****Tactic 2: Instruct the model to work out its own solution before rushing to a conclusion****
 
 ```python
 Question="""XXX"""
@@ -219,7 +219,7 @@ Actual solution:
 """
 ```
 
-## **Model Limitations: Hallucinations**
+### **Model Limitations: Hallucinations**
 
 Hallucination makes statements that sound plausible but are not true
 
@@ -233,7 +233,7 @@ response = get_completion(prompt)
 # Boie is a real company, the product name is not real.
 ```
 
-# ****Iterative Prompt Development****
+## ****Iterative Prompt Development****
 
 ![Untitled](chatgpt-prompt-engineering-for-developers/Untitled%201.png)
 
@@ -241,7 +241,7 @@ response = get_completion(prompt)
 
 The Prompt workflow involves step-by-step development, similar to model training and tuning. However, success in writing prompts usually requires multiple iterations, as depicted in the figure above. It's important to note that there is no one-size-fits-all perfect prompt. The key to becoming a skilled prompt engineer is having a good development and iterative process for creating prompts.
 
-## Issue 1: The text is too long
+### Issue 1: The text is too long
 
 Limit the number of words/sentences/characters.
 
@@ -249,13 +249,13 @@ Limit the number of words/sentences/characters.
 - `Use at most 3 sentences.`
 - `Use at most 280 characters.` (This could be more precise because of the tokenization.)
 
-## **Issue 2. Text focuses on the wrong details**
+### **Issue 2. Text focuses on the wrong details**
 
 Ask it to focus on the aspects that are relevant to the intended audience. For example, 
 
 `The description is intended for furnit, so should be technical in nature and focus on the materials the product is constructed from.`
 
-## **Issue 3. Description needs a table of dimensions**
+### **Issue 3. Description needs a table of dimensions**
 
 Ask it to extract information and organize it in a table. For example, 
 
@@ -267,7 +267,7 @@ Give the table the title 'Product Dimensions'.
 Format everything as HTML that can be used in a website. Place the description in a <div> element.
 ```
 
-# **Summarizing**
+## **Summarizing**
 
 ```python
 prod_review="""xxx"""
@@ -291,7 +291,7 @@ And try "extract" instead of "summarize”:
 
 If we only want to extract information from a specific aspect, we can request the model to perform "text extraction" instead of "text summarization".
 
-# **Inferring**
+## **Inferring**
 
 Identify types of emotions, Extract useful information, Inferring topics, etc.
 
@@ -332,7 +332,7 @@ Text sample: ```{story}```
 response = get_completion(prompt)
 ```
 
-# **Transforming**
+## **Transforming**
 
 Universal Translator, Tone Transformation, Format Conversion, Spellcheck/Grammar check, etc.
 
@@ -361,7 +361,7 @@ table with column headers and title: {data_json}
 response = get_completion(prompt)
 ```
 
-# **Expanding**
+## **Expanding**
 
 Customize the automated reply to a customer email
 
@@ -416,7 +416,7 @@ For a stable and reliable system, it is recommended to set the temperature to 0 
 
 ![Untitled](chatgpt-prompt-engineering-for-developers/Untitled%203.png)
 
-# **Chatbot**
+## **Chatbot**
 
 - Dialogues with users (single or multi-character).
 - System messages: set the assistant's character and behavior, serve as higher-level commands, and are not perceived by the user.
@@ -424,7 +424,7 @@ For a stable and reliable system, it is recommended to set the temperature to 0 
 
 ![Untitled](chatgpt-prompt-engineering-for-developers/Untitled%204.png)
 
-# **Conclusion**
+## **Conclusion**
 
 - Two principles:
     - Write clear and specific instructions
@@ -433,6 +433,6 @@ For a stable and reliable system, it is recommended to set the temperature to 0 
 - The capabilities: Summarizing, Inferring, Transforming, Expanding
 - Building a chatbot
 
-# Reference
+## Reference
 
 [ChatGPT Prompt Engineering for Developers](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/)
