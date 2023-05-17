@@ -6,10 +6,10 @@
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hi@zhangqibot.com (Botter)</managingEditor>
             <webMaster>hi@zhangqibot.com (Botter)</webMaster><lastBuildDate>Wed, 17 May 2023 17:00:11 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
     <title>ChatGPT Prompt Engineering for Developers</title>
-    <link>http://example.org/chatgpt_prompt_engineering_for_developers/</link>
+    <link>http://example.org/chatgpt-prompt-engineering-for-developers/</link>
     <pubDate>Wed, 17 May 2023 17:00:11 &#43;0800</pubDate><author>
                     <name>Botter</name>
-                </author><guid>http://example.org/chatgpt_prompt_engineering_for_developers/</guid>
+                </author><guid>http://example.org/chatgpt-prompt-engineering-for-developers/</guid>
     <description><![CDATA[<p>Course Notes of ChatGPT Prompt Engineering for Developers.</p>]]></description>
 </item></channel>
 </rss>

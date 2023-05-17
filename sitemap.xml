@@ -2,7 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://example.org/chatgpt_prompt_engineering_for_developers/</loc><lastmod>2023-05-17T17:00:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://example.org/chatgpt-prompt-engineering-for-developers/</loc><lastmod>2023-05-17T17:00:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://example.org/authors/</loc><lastmod>2023-05-17T17:00:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://example.org/authors/botter/</loc><lastmod>2023-05-17T17:00:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://example.org/</loc><lastmod>2023-05-17T17:00:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
