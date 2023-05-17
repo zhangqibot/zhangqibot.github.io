@@ -4,12 +4,12 @@
         <link>http://example.org/posts/</link>
         <description>All Posts | Botter</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hi@zhangqibot.com (Botter)</managingEditor>
-            <webMaster>hi@zhangqibot.com (Botter)</webMaster><lastBuildDate>Tue, 09 May 2023 01:04:54 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>Hello World</title>
-    <link>http://example.org/hello-world/</link>
-    <pubDate>Tue, 09 May 2023 01:04:54 &#43;0800</pubDate><author>
+            <webMaster>hi@zhangqibot.com (Botter)</webMaster><lastBuildDate>Wed, 17 May 2023 17:00:11 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>ChatGPT Prompt Engineering for Developers</title>
+    <link>http://example.org/chatgpt_prompt_engineering_for_developers/</link>
+    <pubDate>Wed, 17 May 2023 17:00:11 &#43;0800</pubDate><author>
                     <name>Botter</name>
-                </author><guid>http://example.org/hello-world/</guid>
-    <description><![CDATA[<p>test</p>]]></description>
+                </author><guid>http://example.org/chatgpt_prompt_engineering_for_developers/</guid>
+    <description><![CDATA[<p>Course Notes of ChatGPT Prompt Engineering for Developers.</p>]]></description>
 </item></channel>
 </rss>

@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Botter - Author - Botter</title>
-        <link>http://example.org/authors/botter/</link>
-        <description>Botter - Author - Botter</description>
+        <title>Prompt Engineering - Tag - Botter</title>
+        <link>http://example.org/tags/prompt-engineering/</link>
+        <description>Prompt Engineering - Tag - Botter</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hi@zhangqibot.com (Botter)</managingEditor>
-            <webMaster>hi@zhangqibot.com (Botter)</webMaster><lastBuildDate>Wed, 17 May 2023 17:00:11 &#43;0800</lastBuildDate><atom:link href="http://example.org/authors/botter/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hi@zhangqibot.com (Botter)</webMaster><lastBuildDate>Wed, 17 May 2023 17:00:11 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/prompt-engineering/" rel="self" type="application/rss+xml" /><item>
     <title>ChatGPT Prompt Engineering for Developers</title>
     <link>http://example.org/chatgpt_prompt_engineering_for_developers/</link>
     <pubDate>Wed, 17 May 2023 17:00:11 &#43;0800</pubDate><author>
