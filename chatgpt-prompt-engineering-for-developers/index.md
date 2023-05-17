@@ -17,7 +17,7 @@ Original link to the course: [ChatGPT Prompt Engineering for Developers](https:/
 - Base LLM
 - Instruction Tuned LLM
 
-![Untitled](ChatGPT_Prompt_Engineering_for_Developers/Untitled.png)
+![Untitled](chatgpt-prompt-engineering-for-developers/Untitled.png)
 
 Most applications are based on Instruction Tuned LLM.
 
@@ -235,9 +235,9 @@ response = get_completion(prompt)
 
 # ****Iterative Prompt Development****
 
-![Untitled](ChatGPT_Prompt_Engineering_for_Developers/Untitled%201.png)
+![Untitled](chatgpt-prompt-engineering-for-developers/Untitled%201.png)
 
-![Untitled](ChatGPT_Prompt_Engineering_for_Developers/Untitled%202.png)
+![Untitled](chatgpt-prompt-engineering-for-developers/Untitled%202.png)
 
 The Prompt workflow involves step-by-step development, similar to model training and tuning. However, success in writing prompts usually requires multiple iterations, as depicted in the figure above. It's important to note that there is no one-size-fits-all perfect prompt. The key to becoming a skilled prompt engineer is having a good development and iterative process for creating prompts.
 
@@ -414,7 +414,7 @@ The Temperature parameter affects model diversity by controlling its exploratory
 
 For a stable and reliable system, it is recommended to set the temperature to 0 in a production environment. However, if you seek more creative results, you can set the temperature high.
 
-![Untitled](ChatGPT_Prompt_Engineering_for_Developers/Untitled%203.png)
+![Untitled](chatgpt-prompt-engineering-for-developers/Untitled%203.png)
 
 # **Chatbot**
 
@@ -422,7 +422,7 @@ For a stable and reliable system, it is recommended to set the temperature to 0 
 - System messages: set the assistant's character and behavior, serve as higher-level commands, and are not perceived by the user.
 - Remembering previous conversations: Developers must provide all relevant information for the current conversation. If the model is expected to remember information from previous conversations, the previous dialogue must be input into the model's context.
 
-![Untitled](ChatGPT_Prompt_Engineering_for_Developers/Untitled%204.png)
+![Untitled](chatgpt-prompt-engineering-for-developers/Untitled%204.png)
 
 # **Conclusion**
 
